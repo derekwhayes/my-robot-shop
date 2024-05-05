@@ -13,6 +13,7 @@ Note: Do not remove any elements that were included in the screen. You may add a
 >Describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
 * about.html / * / create about.html
+* about.html / * / add title "About | My Robot Shop"
 ### E. ADD A SAMPLE INVENTORY APPROPRIATE FOR YOUR CHOSEN STORE TO THE APPLICATION
 >You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
