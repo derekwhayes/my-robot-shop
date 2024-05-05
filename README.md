@@ -6,8 +6,8 @@ Create a README file that includes notes describing where in the code to find th
 ### C. CUSTOMIZE THE HTML USER INTERFACE FOR YOUR CUSTOMER'S APPLICATION
 >The user interface should include the shop name, the product names, and the names of the parts.
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
- 
 
+* mainscreen.html / line 14 / change title to "My Robot Shop"
 ### D. ADD AN "ABOUT" PAGE TO THE APPLICATION
 >Describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
