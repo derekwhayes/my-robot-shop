@@ -38,8 +38,7 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-       /*
+        /*
         OutsourcedPart o= new OutsourcedPart();
         o.setCompanyName("Western Governors University");
         o.setName("out test");
@@ -55,9 +54,9 @@ public class BootStrapData implements CommandLineRunner {
 
         System.out.println(thePart.getCompanyName());
         */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
+        List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+        for (OutsourcedPart part : outsourcedParts) {
+            System.out.println(part.getName() + " " + part.getCompanyName());
         }
 
         /*
@@ -66,6 +65,20 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(bicycle);
         productRepository.save(unicycle);
         */
+
+        if (productRepository.count() == 0) {
+            Product personalBot = new Product("Personal Bot", 15000, 5);
+            Product constructorBot = new Product("Constructor Bot", 30000, 5);
+            Product securityBot = new Product("Security Bot", 35000, 5);
+            Product healthBot = new Product("Health Bot", 35000, 5);
+            Product hazardBot = new Product("Hazard Bot", 40000, 5);
+
+            productRepository.save(personalBot);
+            productRepository.save(constructorBot);
+            productRepository.save(securityBot);
+            productRepository.save(healthBot);
+            productRepository.save(hazardBot);
+        }
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());
