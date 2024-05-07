@@ -47,6 +47,10 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * AddProductController.java / line 100 / add buyProduct method to decrease inventory and redirect to purchase page
 >* Display a message that indicates the success or failure of a purchase.
 
+* buyProduct.html / * / copy in about.html
+* buyProduct.html / line 6 / change title
+* buyProduct.html / line 14 / change header
+* buyProduct.html / line 16 / change message
 ### G. MODIFY THE PARTS TO TRACK MAXIMUM AND MINIMUM INVENTORY
 >* Add additional fields to the part entity for maximum and minimum inventory.  
 
