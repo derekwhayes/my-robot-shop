@@ -25,10 +25,17 @@ Note: Do not remove any elements that were included in the screen. You may add a
 ### E. ADD A SAMPLE INVENTORY APPROPRIATE FOR YOUR CHOSEN STORE TO THE APPLICATION
 >You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
- 
+
+* BootStrapData.java / line 69 / add conditional..only add products if table is empty
 * BootStrapData.java / line 70 / create 5 products
 * BootStrapData.java / line 76 / save 5 products
-* BootStrapData.java / line 69 / add conditional..only add products if table is empty
+* BootStrapData.java / line 81 / add conditional for InhouseParts 
+* BootStrapData.java / line 82 / create 3 InhouseParts
+* BootStrapData.java / line 100 / save 3 InhouseParts
+* BootStrapData.java / line 105 / add conditional for OutsourcedParts
+* BootStrapData.java / line 106 / create 2 OutsourcedParts
+* BootStrapData.java / line 118 / save 2 OutsourcedParts
+* application.properties / line 6 / iterate db number to clear testing data
 ### F. ADD A "BUY NOW" BUTTON TO YOUR PRODUCT LIST
 >* The “Buy Now” button must be next to the buttons that update and delete products.  
 
