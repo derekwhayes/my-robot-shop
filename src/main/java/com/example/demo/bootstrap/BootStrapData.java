@@ -2,6 +2,7 @@ package com.example.demo.bootstrap;
 
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
+import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
@@ -10,7 +11,9 @@ import com.example.demo.repositories.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -76,9 +79,7 @@ public class BootStrapData implements CommandLineRunner {
             productRepository.save(securityBot);
             productRepository.save(healthBot);
             productRepository.save(hazardBot);
-        }
 
-        if (inhousePartRepository.count() == 0) {
             InhousePart powerSupply = new InhousePart();
             powerSupply.setName("Power Supply");
             powerSupply.setPrice(3600.0);
@@ -100,9 +101,7 @@ public class BootStrapData implements CommandLineRunner {
             inhousePartRepository.save(powerSupply);
             inhousePartRepository.save(sensorArr);
             inhousePartRepository.save(heavyShielding);
-        }
 
-        if (outsourcedPartRepository.count() == 0) {
             OutsourcedPart sawArm = new OutsourcedPart();
             sawArm.setName("Saw Arm");
             sawArm.setPrice(2000.0);
@@ -117,7 +116,80 @@ public class BootStrapData implements CommandLineRunner {
 
             outsourcedPartRepository.save(sawArm);
             outsourcedPartRepository.save(syringeArm);
+
+            Set<Part> personalBotParts = new HashSet<>();
+            personalBotParts.add(powerSupply);
+            personalBotParts.add(sensorArr);
+            personalBot.setParts(personalBotParts);
+
+            Set<Part> constructorBotParts = new HashSet<>();
+            constructorBotParts.add(powerSupply);
+            constructorBotParts.add(sensorArr);
+            constructorBotParts.add(sawArm);
+            constructorBot.setParts(constructorBotParts);
+
+            Set<Part> securityBotParts = new HashSet<>();
+            securityBotParts.add(powerSupply);
+            securityBotParts.add(sensorArr);
+            securityBotParts.add(sawArm);
+            securityBotParts.add(syringeArm);
+            securityBot.setParts(securityBotParts);
+
+            Set<Part> healthBotParts = new HashSet<>();
+            healthBotParts.add(powerSupply);
+            healthBotParts.add(sensorArr);
+            healthBotParts.add(syringeArm);
+            healthBot.setParts(healthBotParts);
+
+            Set<Part> hazardBotParts = new HashSet<>();
+            hazardBotParts.add(powerSupply);
+            hazardBotParts.add(sensorArr);
+            hazardBotParts.add(heavyShielding);
+            hazardBot.setParts(hazardBotParts);
+
+            Set<Product> powerSupplyProducts = new HashSet<>();
+            powerSupplyProducts.add(personalBot);
+            powerSupplyProducts.add(constructorBot);
+            powerSupplyProducts.add(securityBot);
+            powerSupplyProducts.add(healthBot);
+            powerSupplyProducts.add(hazardBot);
+            powerSupply.setProducts(powerSupplyProducts);
+
+            Set<Product> sensorArrProducts = new HashSet<>();
+            sensorArrProducts.add(personalBot);
+            sensorArrProducts.add(constructorBot);
+            sensorArrProducts.add(securityBot);
+            sensorArrProducts.add(healthBot);
+            sensorArrProducts.add(hazardBot);
+            sensorArr.setProducts(sensorArrProducts);
+
+            Set<Product> sawArmProducts = new HashSet<>();
+            sawArmProducts.add(constructorBot);
+            sawArmProducts.add(securityBot);
+            sawArm.setProducts(sawArmProducts);
+
+            Set<Product> syringeArmProducts = new HashSet<>();
+            syringeArmProducts.add(securityBot);
+            syringeArmProducts.add(healthBot);
+            syringeArm.setProducts(syringeArmProducts);
+
+            Set<Product> heavyShieldingProducts = new HashSet<>();
+            heavyShieldingProducts.add(hazardBot);
+            heavyShielding.setProducts(heavyShieldingProducts);
+
+//            System.out.println("*** " + personalBot.getParts());
+//            System.out.println("*** " + constructorBot.getParts());
+//            System.out.println("*** " + securityBot.getParts());
+//            System.out.println("*** " + healthBot.getParts());
+//            System.out.println("*** " + hazardBot.getParts());
+//            System.out.println("*** " + powerSupply.getProducts());
+//            System.out.println("*** " + sensorArr.getProducts());
+//            System.out.println("*** " + sawArm.getProducts());
+//            System.out.println("*** " + syringeArm.getProducts());
+//            System.out.println("*** " + heavyShielding.getProducts());
         }
+
+
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());

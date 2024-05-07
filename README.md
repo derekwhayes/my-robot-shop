@@ -35,6 +35,8 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * BootStrapData.java / line 105 / add conditional for OutsourcedParts
 * BootStrapData.java / line 106 / create 2 OutsourcedParts
 * BootStrapData.java / line 118 / save 2 OutsourcedParts
+* BootStrapData.java / line 120 / set parts for different products
+* BootStrapData.java / line 150 / set products for different parts
 * application.properties / line 6 / iterate db number to clear testing data
 ### F. ADD A "BUY NOW" BUTTON TO YOUR PRODUCT LIST
 >* The “Buy Now” button must be next to the buttons that update and delete products.  
