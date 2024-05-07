@@ -44,6 +44,7 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * mainscreen.html / line 82 / add "Buy Now" button
 >* The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.  
 
+* AddProductController.java / line 100 / add buyProduct method to decrease inventory and redirect to purchase page
 >* Display a message that indicates the success or failure of a purchase.
 
 ### G. MODIFY THE PARTS TO TRACK MAXIMUM AND MINIMUM INVENTORY
