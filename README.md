@@ -41,6 +41,7 @@ Note: Make sure the sample inventory is added only when both the part and produc
 ### F. ADD A "BUY NOW" BUTTON TO YOUR PRODUCT LIST
 >* The “Buy Now” button must be next to the buttons that update and delete products.  
 
+* mainscreen.html / line 82 / add "Buy Now" button
 >* The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.  
 
 >* Display a message that indicates the success or failure of a purchase.
