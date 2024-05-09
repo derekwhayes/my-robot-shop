@@ -83,7 +83,7 @@
             <td th:text="${tempProduct.name}">1</td>
             <td th:text="${tempProduct.price}">1</td>
             <td th:text="${tempProduct.inv}">1</td>
-            <td><form method="POST" action="#" th:action="@{/buyProduct(productID=${tempProduct.id})}">
+            <td><form method="POST" action="#" th:action="@{/buyProduct(productID=${tempProduct.id})}" class="d-inline">
                     <input type="submit" class="btn btn-primary btn-sm mb-3" value="Buy Now">
                 </form>
                 <a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
