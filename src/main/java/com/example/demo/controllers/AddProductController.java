@@ -35,6 +35,8 @@ public class AddProductController {
     private Product product;
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private ProductServiceImpl productServiceImpl;
 
     @GetMapping("/showFormAddProduct")
     public String showFormAddPart(Model theModel) {
@@ -98,10 +100,8 @@ public class AddProductController {
     }
 
     @PostMapping("/buyProduct")
-    public String buyProduct(@RequestParam("productID") long theId, Model theModel) {
-        Product tempProduct = new Product();
-        theModel.addAttribute("product", tempProduct);
-        product.setInv(product.getInv() - 1);
+    public String buyProduct(@RequestParam("productID") long theId) {
+        productServiceImpl.buyNow(theId);
         return "buyProduct";
     }
 

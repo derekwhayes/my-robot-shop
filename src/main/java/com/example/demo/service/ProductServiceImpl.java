@@ -66,4 +66,13 @@ public class ProductServiceImpl implements ProductService{
         }
         return (List<Product>) productRepository.findAll();
     }
+
+    @Override
+    public void buyNow(long theId) {
+        Optional<Product> result = productRepository.findById(theId);
+        Product theProduct = result.get();
+        theProduct.setInv(theProduct.getInv() - 1);
+        productRepository.save(theProduct);
+    }
+
 }

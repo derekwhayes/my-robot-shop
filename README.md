@@ -42,9 +42,18 @@ Note: Make sure the sample inventory is added only when both the part and produc
 >* The “Buy Now” button must be next to the buttons that update and delete products.  
 
 * mainscreen.html / line 82 / add "Buy Now" button
+* mainscreen.html / line 82 / add form for buy now submission
 >* The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.  
 
-* AddProductController.java / line 100 / add buyProduct method to decrease inventory and redirect to purchase page
+* AddProductController.java / line 103 / add buyProduct method
+* AddProductController.java / line 104 / call buyNow service
+* AddProductController.java / line 105 / return result page
+* ProductService.java / line 20 / add buyNow method
+* ProductServiceImpl.java / line 71 / add buyNow method
+* ProductServiceImpl.java / line 72 / find the product by ID
+* ProductServiceImpl.java / line 73 / assing theProduct object with referenced Product
+* ProductServiceImpl.java / line 74 / reduce inventory by 1
+* ProductServiceImpl.java / line 75 / save update to database
 >* Display a message that indicates the success or failure of a purchase.
 
 * buyProduct.html / * / copy in about.html
