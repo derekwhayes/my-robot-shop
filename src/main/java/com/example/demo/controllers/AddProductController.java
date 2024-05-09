@@ -99,7 +99,7 @@ public class AddProductController {
 
     @PostMapping("/buyProduct")
     public String buyProduct(@RequestParam("productID") long theId, Model theModel) {
-        Optional<Product> tempProduct = productRepository.findById(theId);
+        Product tempProduct = new Product();
         theModel.addAttribute("product", tempProduct);
         product.setInv(product.getInv() - 1);
         return "buyProduct";
