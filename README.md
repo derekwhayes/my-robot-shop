@@ -106,5 +106,12 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * AddInhousePartController.java / line 46 / split conditional to display specific message for low inventory
 * AddOutsourcedPartController.java / line 48 / split conditional to display specific message for low inventory
 ### I. ADD AT LEAST TWO UNIT TESTS FOR THE MAXIMUM AND MINIMUM FIELDS TO THE PartTest CLASS IN THE TEST PACKAGE
+
+* PartTest.java / line 161 / create setMinInv()
+* PartTest.java / line 162 / initialize test variable
+* PartTest.java / line 163 / call setMinVal()
+* PartTest.java / line 164 / test is minVal and actual minVal are equal
+* PartTest.java / line 165 / repeat for partOut
+* PartTest.java / line 170 / repeat for setMaxVal
 ### J. REMOVE THE CLASS FILES FOR ANY UNUSED VALIDATORS IN ORDER TO CLEAN YOU CODE
  
