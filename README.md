@@ -60,6 +60,13 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * buyProduct.html / line 6 / change title
 * buyProduct.html / line 14 / change header
 * buyProduct.html / line 16 / change message
+* ProductServiceImpl.java / line 71 / add return value boolean to indicate success or failure
+* ProductServiceImpl.java / line 74 / add conditional to see if inventory > 0
+* ProductServiceImpl.java / line 77 / return true if inv reduced
+* ProductServiceImpl.java / line 79 / else return false
+* AddProductController.java / line 104 / add conditional to check if inv reduction was successful
+* AddProductController.java / line 105 / if true return success page
+* AddProductController.java / line 107 / else return error page
 ### G. MODIFY THE PARTS TO TRACK MAXIMUM AND MINIMUM INVENTORY
 >* Add additional fields to the part entity for maximum and minimum inventory.  
 

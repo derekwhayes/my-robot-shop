@@ -101,8 +101,10 @@ public class AddProductController {
 
     @PostMapping("/buyProduct")
     public String buyProduct(@RequestParam("productID") long theId) {
-        productServiceImpl.buyNow(theId);
-        return "buyProduct";
+        if (productServiceImpl.buyNow(theId)) {
+            return "buyProduct";
+        }
+        return "errorBuyProduct";
     }
 
     @GetMapping("/showProductFormForUpdate")

@@ -68,11 +68,15 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void buyNow(long theId) {
+    public boolean buyNow(long theId) {
         Optional<Product> result = productRepository.findById(theId);
         Product theProduct = result.get();
-        theProduct.setInv(theProduct.getInv() - 1);
-        productRepository.save(theProduct);
+        if (theProduct.getInv() > 0) {
+            theProduct.setInv(theProduct.getInv() - 1);
+            productRepository.save(theProduct);
+            return true;
+        }
+        return false;
     }
 
 }
