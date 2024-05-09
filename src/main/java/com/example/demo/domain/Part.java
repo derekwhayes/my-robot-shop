@@ -58,6 +58,13 @@ public abstract class Part implements Serializable {
         this.maxInv = maxInv;
     }
 
+    public boolean checkMinMaxInv(int inv) {
+        if (inv < minInv || inv > maxInv) {
+            return false;
+        }
+        return true;
+    }
+
     public long getId() {
         return id;
     }
