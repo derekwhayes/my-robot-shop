@@ -115,3 +115,4 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * PartTest.java / line 170 / repeat for setMaxVal
 ### J. REMOVE THE CLASS FILES FOR ANY UNUSED VALIDATORS IN ORDER TO CLEAN YOU CODE
  
+* DeletePartValidator / * / delete unused file
