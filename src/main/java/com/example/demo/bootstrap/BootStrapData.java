@@ -196,17 +196,6 @@ public class BootStrapData implements CommandLineRunner {
             heavyShieldingProducts.add(hazardBot);
             heavyShielding.setProducts(heavyShieldingProducts);
             inhousePartRepository.save(heavyShielding);
-
-//            System.out.println("*** " + personalBot.getParts());
-//            System.out.println("*** " + constructorBot.getParts());
-//            System.out.println("*** " + securityBot.getParts());
-//            System.out.println("*** " + healthBot.getParts());
-//            System.out.println("*** " + hazardBot.getParts());
-//            System.out.println("*** " + powerSupply.getProducts());
-//            System.out.println("*** " + sensorArr.getProducts());
-//            System.out.println("*** " + sawArm.getProducts());
-//            System.out.println("*** " + syringeArm.getProducts());
-//            System.out.println("*** " + heavyShielding.getProducts());
         }
 
         System.out.println("Started in Bootstrap");
