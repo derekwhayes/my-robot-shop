@@ -131,12 +131,14 @@ public class BootStrapData implements CommandLineRunner {
             personalBotParts.add(powerSupply);
             personalBotParts.add(sensorArr);
             personalBot.setParts(personalBotParts);
+            productRepository.save(personalBot);
 
             Set<Part> constructorBotParts = new HashSet<>();
             constructorBotParts.add(powerSupply);
             constructorBotParts.add(sensorArr);
             constructorBotParts.add(sawArm);
             constructorBot.setParts(constructorBotParts);
+            productRepository.save(constructorBot);
 
             Set<Part> securityBotParts = new HashSet<>();
             securityBotParts.add(powerSupply);
@@ -144,18 +146,21 @@ public class BootStrapData implements CommandLineRunner {
             securityBotParts.add(sawArm);
             securityBotParts.add(syringeArm);
             securityBot.setParts(securityBotParts);
+            productRepository.save(securityBot);
 
             Set<Part> healthBotParts = new HashSet<>();
             healthBotParts.add(powerSupply);
             healthBotParts.add(sensorArr);
             healthBotParts.add(syringeArm);
             healthBot.setParts(healthBotParts);
+            productRepository.save(healthBot);
 
             Set<Part> hazardBotParts = new HashSet<>();
             hazardBotParts.add(powerSupply);
             hazardBotParts.add(sensorArr);
             hazardBotParts.add(heavyShielding);
             hazardBot.setParts(hazardBotParts);
+            productRepository.save(hazardBot);
 
             Set<Product> powerSupplyProducts = new HashSet<>();
             powerSupplyProducts.add(personalBot);
@@ -164,6 +169,7 @@ public class BootStrapData implements CommandLineRunner {
             powerSupplyProducts.add(healthBot);
             powerSupplyProducts.add(hazardBot);
             powerSupply.setProducts(powerSupplyProducts);
+            inhousePartRepository.save(powerSupply);
 
             Set<Product> sensorArrProducts = new HashSet<>();
             sensorArrProducts.add(personalBot);
@@ -172,20 +178,24 @@ public class BootStrapData implements CommandLineRunner {
             sensorArrProducts.add(healthBot);
             sensorArrProducts.add(hazardBot);
             sensorArr.setProducts(sensorArrProducts);
+            inhousePartRepository.save(sensorArr);
 
             Set<Product> sawArmProducts = new HashSet<>();
             sawArmProducts.add(constructorBot);
             sawArmProducts.add(securityBot);
             sawArm.setProducts(sawArmProducts);
+            outsourcedPartRepository.save(sawArm);
 
             Set<Product> syringeArmProducts = new HashSet<>();
             syringeArmProducts.add(securityBot);
             syringeArmProducts.add(healthBot);
             syringeArm.setProducts(syringeArmProducts);
+            outsourcedPartRepository.save(syringeArm);
 
             Set<Product> heavyShieldingProducts = new HashSet<>();
             heavyShieldingProducts.add(hazardBot);
             heavyShielding.setProducts(heavyShieldingProducts);
+            inhousePartRepository.save(heavyShielding);
 
 //            System.out.println("*** " + personalBot.getParts());
 //            System.out.println("*** " + constructorBot.getParts());
@@ -198,8 +208,6 @@ public class BootStrapData implements CommandLineRunner {
 //            System.out.println("*** " + syringeArm.getProducts());
 //            System.out.println("*** " + heavyShielding.getProducts());
         }
-
-
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());
