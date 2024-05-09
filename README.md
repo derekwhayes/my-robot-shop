@@ -90,6 +90,7 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * AddInhousePartController.java / line 42 / add check if inv is outside min-max range
 * AddInhousePartController.java / line 43 / assign an error msg
 * AddInhousePartController.java / line 44 / return to the form now displaying error
+* AddOutsourcedPartController.java / line 44 / add the same conditional to the outsource controller
 ### H. ADD VALIDATION FOR BETWEEN OR AT THE MAXIMUM AND MINIMUM FIELDS
 >* Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.  
 
