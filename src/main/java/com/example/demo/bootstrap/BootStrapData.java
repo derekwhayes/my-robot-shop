@@ -85,18 +85,24 @@ public class BootStrapData implements CommandLineRunner {
             powerSupply.setPrice(3600.0);
             powerSupply.setInv(5);
             powerSupply.setPartId(1000);
+            powerSupply.setMinInv(0);
+            powerSupply.setMaxInv(10);
 
             InhousePart sensorArr = new InhousePart();
             sensorArr.setName("Sensor Array");
             sensorArr.setPrice(2900.0);
             sensorArr.setInv(5);
             sensorArr.setPartId(1100);
+            sensorArr.setMinInv(0);
+            sensorArr.setMaxInv(10);
 
             InhousePart heavyShielding = new InhousePart();
             heavyShielding.setName("Heavy Shielding");
             heavyShielding.setPrice(5100.0);
             heavyShielding.setInv(5);
             heavyShielding.setPartId(1200);
+            heavyShielding.setMinInv(0);
+            heavyShielding.setMaxInv(10);
 
             inhousePartRepository.save(powerSupply);
             inhousePartRepository.save(sensorArr);
@@ -107,12 +113,16 @@ public class BootStrapData implements CommandLineRunner {
             sawArm.setPrice(2000.0);
             sawArm.setInv(5);
             sawArm.setCompanyName("PKD Lumber");
+            sawArm.setMinInv(0);
+            sawArm.setMaxInv(10);
 
             OutsourcedPart syringeArm = new OutsourcedPart();
             syringeArm.setName("Syringe Arm");
             syringeArm.setPrice(1800.0);
             syringeArm.setInv(5);
             syringeArm.setCompanyName("Dr. Fred's Syringe Emporium");
+            syringeArm.setMinInv(0);
+            syringeArm.setMaxInv(10);
 
             outsourcedPartRepository.save(sawArm);
             outsourcedPartRepository.save(syringeArm);
