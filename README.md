@@ -75,6 +75,7 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * Part.java / line 44 / add new fields to constructor
 * Part.java / line 52 / add new fields to constructor
 * Part.java / line 101 / add getters and setters for new fields
+* mainscreen.html / line 47 / add min and max columns to template
 >* Modify the sample inventory to include the maximum and minimum fields.  
 
 * BootStrapData / line 88 / set min and max for all parts

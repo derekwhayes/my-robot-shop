@@ -85,24 +85,24 @@ public class BootStrapData implements CommandLineRunner {
             powerSupply.setPrice(3600.0);
             powerSupply.setInv(5);
             powerSupply.setPartId(1000);
-            powerSupply.setMinInv(0);
-            powerSupply.setMaxInv(10);
+            powerSupply.setMinInv(3);
+            powerSupply.setMaxInv(20);
 
             InhousePart sensorArr = new InhousePart();
             sensorArr.setName("Sensor Array");
             sensorArr.setPrice(2900.0);
             sensorArr.setInv(5);
             sensorArr.setPartId(1100);
-            sensorArr.setMinInv(0);
-            sensorArr.setMaxInv(10);
+            sensorArr.setMinInv(3);
+            sensorArr.setMaxInv(20);
 
             InhousePart heavyShielding = new InhousePart();
             heavyShielding.setName("Heavy Shielding");
             heavyShielding.setPrice(5100.0);
             heavyShielding.setInv(5);
             heavyShielding.setPartId(1200);
-            heavyShielding.setMinInv(0);
-            heavyShielding.setMaxInv(10);
+            heavyShielding.setMinInv(3);
+            heavyShielding.setMaxInv(20);
 
             inhousePartRepository.save(powerSupply);
             inhousePartRepository.save(sensorArr);
@@ -113,16 +113,16 @@ public class BootStrapData implements CommandLineRunner {
             sawArm.setPrice(2000.0);
             sawArm.setInv(5);
             sawArm.setCompanyName("PKD Lumber");
-            sawArm.setMinInv(0);
-            sawArm.setMaxInv(10);
+            sawArm.setMinInv(3);
+            sawArm.setMaxInv(20);
 
             OutsourcedPart syringeArm = new OutsourcedPart();
             syringeArm.setName("Syringe Arm");
             syringeArm.setPrice(1800.0);
             syringeArm.setInv(5);
             syringeArm.setCompanyName("Dr. Fred's Syringe Emporium");
-            syringeArm.setMinInv(0);
-            syringeArm.setMaxInv(10);
+            syringeArm.setMinInv(3);
+            syringeArm.setMaxInv(20);
 
             outsourcedPartRepository.save(sawArm);
             outsourcedPartRepository.save(syringeArm);
