@@ -99,7 +99,7 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * AddOutsourcedPartController.java / line 44 / split conditional to display specific message for low inventory
 >* Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.  
 
-* EnufPartsValidator.java / line 36 / change logic to check if inv is less than or equal to minInv
+* EnufPartsValidator.java / line 36 / change logic to check if minInv <= product inv
 * ValidEnufParts.java / line 20 / change msg to indicate inventory is low
 >*  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
