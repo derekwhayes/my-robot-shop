@@ -70,6 +70,11 @@ Note: Make sure the sample inventory is added only when both the part and produc
 ### G. MODIFY THE PARTS TO TRACK MAXIMUM AND MINIMUM INVENTORY
 >* Add additional fields to the part entity for maximum and minimum inventory.  
 
+* Part.java / line 32 / add minInv field
+* Part.java / line 34 / add maxInv field
+* Part.java / line 44 / add new fields to constructor
+* Part.java / line 52 / add new fields to constructor
+* Part.java / line 101 / add getters and setters for new fields
 >* Modify the sample inventory to include the maximum and minimum fields.  
 
 >* Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.  
