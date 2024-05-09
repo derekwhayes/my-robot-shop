@@ -89,14 +89,17 @@ Note: Make sure the sample inventory is added only when both the part and produc
 >* Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
 * AddInhousePartController.java / line 42 / add check if inv is outside min-max range
-* AddInhousePartController.java / line 43 / assign an error msg
-* AddInhousePartController.java / line 44 / return to the form now displaying error
+* AddInhousePartController.java / line 44 / return to the form* Add
+* InhousePartController.java / line 43 / assign an error msg
 * AddOutsourcedPartController.java / line 44 / add the same conditional to the outsource controller
 ### H. ADD VALIDATION FOR BETWEEN OR AT THE MAXIMUM AND MINIMUM FIELDS
 >* Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.  
 
+* AddInhousePartController.java / line 42 / split conditional to display specific message for low inventory
+* AddOutsourcedPartController.java / line 44 / split conditional to display specific message for low inventory
 >* Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.  
 
+* 
 >*  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
 ### I. ADD AT LEAST TWO UNIT TESTS FOR THE MAXIMUM AND MINIMUM FIELDS TO THE PartTest CLASS IN THE TEST PACKAGE

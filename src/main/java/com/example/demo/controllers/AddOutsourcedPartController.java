@@ -41,8 +41,12 @@ public class AddOutsourcedPartController {
     public String submitForm(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart part, BindingResult bindingResult, Model theModel){
         theModel.addAttribute("outsourcedpart",part);
 
-        if (part.getInv() < part.getMinInv() || part.getInv() > part.getMaxInv()) {
-            bindingResult.rejectValue("inv", "error.outsourcedpart", "Inventory must be in correct range");
+        if (part.getInv() < part.getMinInv()) {
+            bindingResult.rejectValue("inv", "error.outsourcedpart", "Inventory levels too low!");
+            return "OutsourcedPartForm";
+        }
+        else if (part.getInv() > part.getMaxInv()) {
+            bindingResult.rejectValue("inv", "error.outsourcedpart", "Inventory cannot exceed maximum!");
             return "OutsourcedPartForm";
         }
 
