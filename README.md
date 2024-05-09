@@ -91,6 +91,8 @@ Note: Make sure the sample inventory is added only when both the part and produc
 * ValidminMax.java / * / create custom annotation copied from ValidProductPrice
 * ValidminMax.java / line 10 / change validator name
 * ValidminMax.java / line 14 / change default message
+* MinMaxValidator.java / * / create validator copied from PriceProductValidator
+* 
 ### H. ADD VALIDATION FOR BETWEEN OR AT THE MAXIMUM AND MINIMUM FIELDS
 >* Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.  
 
