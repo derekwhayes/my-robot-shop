@@ -1,6 +1,5 @@
-# WESTERN GOVERNOR UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
-Welcome to Java Frameworks! This is an opportunity for students to implement user interfaces and learn to leverage existing frameworks, assets, and content for object-oriented programming.
+# My Robot Shop
+
 ## CHANGELOG
 Create a README file that includes notes describing where in the code to find the changes you made for each of parts C to J. Each note should include the prompt, file name, line number, and change.
 ### C. CUSTOMIZE THE HTML USER INTERFACE FOR YOUR CUSTOMER'S APPLICATION
